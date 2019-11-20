@@ -25,7 +25,7 @@ export class HelloWorldService implements HelloWorldApi {
         this.logger.error(e);
         throw new Error('"Catching and Throwing errors');
       } finally {
-        throw new Error('Last chance to trap this Error');
+        this.logger.debug('running at finally');
       }
     }
     return `Hello, ${name}!`;
